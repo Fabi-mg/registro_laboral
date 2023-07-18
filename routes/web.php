@@ -10,6 +10,7 @@ use App\Http\Controllers\FicharController;
 use App\Http\Controllers\GestionEmpleadosController;
 use App\Http\Controllers\HorarioGeneralController;
 use App\Http\Controllers\UsuarioAdminController;
+use App\Http\Controllers\ChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +66,5 @@ Route::get('/crear-usuario-admin', [UsuarioAdminController::class, 'crearUsuario
 
 Route::get('/admin/horarios/filtrar', [HorarioGeneralController::class, 'filtrar'])->name('admin.horarioGeneral');
 
+Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
+Route::post('/chat', [ChatController::class, 'store'])->name('chat.store');
